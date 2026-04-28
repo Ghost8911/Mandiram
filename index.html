@@ -594,13 +594,21 @@
   /* ── SCROLL REVEAL ── */
   .reveal {
     opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
   }
 
   .reveal.visible {
     opacity: 1;
     transform: none;
+  }
+
+  /* Fallback: show all after page load on mobile */
+  @media (max-width: 768px) {
+    .reveal {
+      opacity: 1 !important;
+      transform: none !important;
+    }
   }
 
   /* ── RESPONSIVE ── */
@@ -632,6 +640,7 @@
     <li><a href="#programs">Programs</a></li>
     <li><a href="#location">Location</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#guru">Guru</a></li>
   </ul>
 </nav>
 
@@ -838,12 +847,54 @@
   </div>
 </section>
 
+<!-- GURU BIO TEXT -->
+<section style="background:var(--forest);padding:6rem 2rem;">
+  <div class="section-inner" style="max-width:900px;margin:0 auto;">
+
+    <p class="section-label" style="text-align:center;">The Teacher</p>
+    <h2 class="section-title" style="text-align:center;margin-bottom:0.5rem;">Vijayan <em>Vijayakumaran Vasu</em></h2>
+    <p style="text-align:center;font-size:0.85rem;color:var(--mist);letter-spacing:0.1em;margin-bottom:3rem;">Yoga Practitioner · Spiritual Teacher · Palakkad, Kerala</p>
+
+    <div style="width:50px;height:1px;background:var(--gold);margin:0 auto 3rem;"></div>
+
+    <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--gold-light);line-height:1.8;text-align:center;margin-bottom:2.5rem;padding:0 1rem;">
+      "Rooted in ancient wisdom, he bridges the timeless science of yoga with the lived experience of modern seekers."
+    </p>
+
+    <p style="font-size:0.95rem;line-height:2;color:var(--mist);font-weight:300;margin-bottom:1.5rem;">
+      Vijayan (Vijayakumaran Vasu) is a dedicated yoga practitioner and spiritual teacher with over <strong style="color:var(--cream);font-weight:400;">30 years of devoted practice</strong>. He is the founder of <strong style="color:var(--cream);font-weight:400;">Vaanaprastham — the School of Yoga and Oriental Studies</strong> — and serves as a consulting Astrologer, Palmist, and Tantric Healer.
+    </p>
+
+    <p style="font-size:0.95rem;line-height:2;color:var(--mist);font-weight:300;margin-bottom:1.5rem;">
+      His spiritual formation was shaped by a lineage of revered masters — <strong style="color:var(--cream);font-weight:400;">Mani Swamy</strong>, <strong style="color:var(--cream);font-weight:400;">Krishna Guruji</strong>, and <strong style="color:var(--cream);font-weight:400;">Guru Nithya Chaitanya Yathi</strong> — under whose guidance he absorbed the depths of Gyanyoga, Bhakti Marga, Gayathri Hawanam, Homatherapy, and Tantric Healing. He regularly undertakes Sadhana journeys to the <strong style="color:var(--cream);font-weight:400;">Himalayas</strong> to deepen his practice and inner realisation.
+    </p>
+
+    <p style="font-size:0.95rem;line-height:2;color:var(--mist);font-weight:300;margin-bottom:1.5rem;">
+      His teachings include a <strong style="color:var(--cream);font-weight:400;">Tension Free Workshop</strong> integrating Asanas, Pranayama and Mantra; a <strong style="color:var(--cream);font-weight:400;">Five-Tier Meditation</strong> system addressing the physical, pranic, intellectual, mental, and spiritual energy levels; and Tantric remedies for horoscopic and psychosomatic problems through Hora Shastra and Vasthu Shastra.
+    </p>
+
+    <p style="font-size:0.95rem;line-height:2;color:var(--mist);font-weight:300;margin-bottom:3rem;">
+      Vijayan serves as a consultant at <strong style="color:var(--cream);font-weight:400;">Kairali Resort, Palakkad</strong> and <strong style="color:var(--cream);font-weight:400;">Om Vedic Heritage Centre, Singapore</strong>, where he has helped hundreds through Astrology and Tantric Healing. His wife, <strong style="color:var(--cream);font-weight:400;">Chitra Vijayan</strong>, serves as a Yoga Teacher at the institution.
+    </p>
+
+    <div style="display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;">
+      <span style="border:1px solid rgba(201,169,110,0.3);padding:0.4rem 1rem;font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.15em;color:var(--gold);">30 YRS PRACTICE</span>
+      <span style="border:1px solid rgba(201,169,110,0.3);padding:0.4rem 1rem;font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.15em;color:var(--gold);">HIMALAYAN SADHANA</span>
+      <span style="border:1px solid rgba(201,169,110,0.3);padding:0.4rem 1rem;font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.15em;color:var(--gold);">GYANYOGA</span>
+      <span style="border:1px solid rgba(201,169,110,0.3);padding:0.4rem 1rem;font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.15em;color:var(--gold);">BHAKTI MARGA</span>
+      <span style="border:1px solid rgba(201,169,110,0.3);padding:0.4rem 1rem;font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.15em;color:var(--gold);">TANTRIC HEALING</span>
+      <span style="border:1px solid rgba(201,169,110,0.3);padding:0.4rem 1rem;font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.15em;color:var(--gold);">VASTHU SHASTRA</span>
+    </div>
+
+  </div>
+</section>
+
 <!-- CONTACT CTA -->
 <section id="contact">
   <div class="contact-inner">
     <div class="reveal">
       <p class="section-label">Begin Your Path</p>
-      <h2 class="section-title">Ready to <em>Awaken</em>?</h2>
+      <h2 class="section-title">Are You Ready to <em>Awaken</em>?</h2>
       <p class="section-body">
         Whether you seek healing, spiritual growth, or the ancient wisdom of Prana Vidya — the doors of Mani Mandiram are open. Reach out to enquire about upcoming programs, retreats, or personal guidance.
       </p>
@@ -855,6 +906,7 @@
   </div>
 </section>
 
+<!-- GURU SECTION -->
 <footer>
   <p>© 2025 Sadh Guru Mani Mandiram Prana Vidya Training Center · Pothundy Dam, Kerala · <a href="https://maps.google.com/?q=GJWC+MG+Pothundy+Dam+Kerala" target="_blank">View on Google Maps</a></p>
 </footer>
@@ -915,6 +967,11 @@
     });
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
+
+  // Hard fallback: make everything visible after 1.5s
+  setTimeout(() => {
+    reveals.forEach(el => el.classList.add('visible'));
+  }, 1500);
 
   // Smooth image parallax on gallery
   const galleryImg = document.querySelector('.gallery-item img');
